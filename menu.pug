@@ -1,0 +1,28 @@
+mixin menu(title)
+    if title == 'Главная'
+        .menu1.curr
+            a(href="#") CSS
+    else 
+        .menu1
+            a(href="index.html") CSS
+
+    .menu2
+        a(href="#") Синтаксис CSS
+    .menu3
+        a(href="#") Вставка CSS
+    .menu4
+        a(href="#") CSS текст
+
+    if title == 'Шрифт'
+        .menu5.curr
+            a(href="#") CSS шрифт
+    else 
+        .menu5
+            a(href="font.html") CSS шрифт
+
+    if title == 'Блоки'
+        .menu6.curr
+            a(href="#") Блоки
+    else 
+        .menu6
+            a(href="block.html") Блоки

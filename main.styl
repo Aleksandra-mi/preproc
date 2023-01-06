@@ -1,0 +1,110 @@
+pad = 10px
+col = #DCDCDC
+
+style-grid(num1, num2)
+	grid-column num1
+	grid-row num2
+
+style-grid-big(num1, num2, num3, num4)
+	grid-column num1 / span num2
+	grid-row num3 / span num4
+
+body
+	background-color #164B69
+	font-size 14px
+	font-family arial
+	p
+		text-align justify
+		line-height 2
+		text-indent 2em
+		word-spacing 0.5em
+		word-wrap break-word
+	a
+		text-decoration none
+		font-weight bold
+		color black
+	.grid-container
+		overflow hidden
+		display grid
+		width 60%
+		min-height 700px
+		min-width 600px
+		padding pad
+		margin pad auto
+		background-color #E3E3E3
+		display grid
+		grid-gap 5px
+		grid-template-rows auto
+		grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr
+
+		div
+			overflow hidden
+			//border solid thin
+			padding 5px
+			box-sizing border-box
+		a
+			text-decoration none
+			font-weight bold
+			color black
+		img
+			width 100%
+		video
+			width 100%
+		.curr
+			background-color col
+		.menu1
+			text-align center
+			style-grid(1, 1)
+		.menu2
+			text-align center
+			style-grid(2, 1)
+		.menu3
+			text-align center
+			style-grid(3, 1)
+		.menu4
+			text-align center
+			style-grid(4, 1)
+		.menu5
+			text-align center
+			style-grid(5, 1)
+		.menu6
+			text-align center
+			style-grid(6, 1)
+		
+		.t1-1
+			style-grid-big(1, 6, 2, 1)
+		.t1-2
+			img
+				margin 0 5px
+				width 40%
+				float right
+			style-grid-big(1, 6, 3, 1)
+		.video
+			margin auto
+			style-grid-big(1, 6, 4, 1)	
+
+		.pic2-1
+			style-grid-big(1, 2, 2, 1)
+		.pic2-2
+			style-grid-big(3, 2, 2, 1)
+		.pic2-3
+			style-grid-big(5, 2, 2, 1)
+		.t2-1
+			style-grid-big(1, 6, 3, 1)
+		.t2-2
+			style-grid-big(1, 6, 4, 1)
+
+		.pic3-1
+			style-grid-big(1, 4, 2, 2)
+		.pic3-2
+			style-grid-big(5, 2, 2, 1)
+		.pic3-3
+			style-grid-big(5, 2, 3, 1)
+		.t3-1
+			style-grid-big(1, 2, 4, 1)
+		.t3-2
+			style-grid-big(3, 2, 4, 1)
+		.t3-3
+			style-grid-big(5, 2, 4, 1)
+
+	@import media
